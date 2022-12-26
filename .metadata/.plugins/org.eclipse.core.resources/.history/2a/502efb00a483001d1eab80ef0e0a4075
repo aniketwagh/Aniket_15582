@@ -1,0 +1,27 @@
+package com.ecom;
+
+import java.util.List;
+
+import com.training.bankapp.dao.BankAccountDao;
+import com.training.bankapp.dao.DbConnection;
+import com.training.bankapp.model.BankAccount;
+
+public class PlaceOrder {
+
+	public static void main(String[] args) {
+		try {
+			final DbConnection db=DbConnection.getDb();
+			final BankAccountDao dao=new BankAccountDao(db);
+			final List<BankAccount> list=dao.findAll();
+			for(BankAccount a: list) {
+				System.out.println(a);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	}
+
+}

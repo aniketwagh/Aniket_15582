@@ -1,0 +1,5 @@
+package com.capston.shopping.model;
+
+public class ProductsList {
+
+}

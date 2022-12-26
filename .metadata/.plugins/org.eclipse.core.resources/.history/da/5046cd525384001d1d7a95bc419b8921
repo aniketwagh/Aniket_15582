@@ -1,0 +1,13 @@
+package com.Ecom.controller;
+
+import com.Ecom.model.Customer;
+
+public class CustomerController implements IController<Customer> {
+
+	private static CustomerController customercontroller;
+	private CustomerCollection customercollection;
+	public CustomerController() {
+		super();
+		this.customercollection = CustomerCollection.getCustomerCollection();
+	}
+}

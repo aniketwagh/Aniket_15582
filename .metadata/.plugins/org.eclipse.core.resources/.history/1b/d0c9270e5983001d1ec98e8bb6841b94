@@ -1,0 +1,25 @@
+package com.ecom.main;
+
+import java.util.Set;
+
+import com.ecom.dao.CustomerCollection;
+import com.ecom.dao.ProductCollection;
+import com.ecom.model.Products;
+
+public class CustomerDetails {
+
+	public static void main(String[] args) {
+		CustomerCollection pc = CustomerCollection.getCollection();
+		Set<Customer> p = pc.getList();
+		System.out.println("!================Disply all Records================!");
+		p.add(new Products("Nokia"));
+		p.add(new Products("Samsung"));
+		p.add(new Products("Realme"));
+		for(Products p1 : p)
+		{
+			System.out.println(p1);
+		}	// TODO Auto-generated method stub
+
+	}
+
+}

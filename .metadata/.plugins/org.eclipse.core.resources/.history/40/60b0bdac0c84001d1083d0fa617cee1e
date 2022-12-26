@@ -1,0 +1,39 @@
+package com.Ecom.Dao;
+
+import com.Ecom.model.ProductDetails;
+
+public class ProductDao implements IDao<ProductDetails>{
+	
+	private DbConnection db;
+	private static ProductDao productdao;
+	public ProductDao() {
+		super();
+	}
+	public ProductDao(DbConnection db) {
+		super();
+		this.db = db;
+	}
+	
+//	public static BankAccountDao getBankAccountDao() {
+//		if(bankAccountDao==null) {
+//			synchronized (BankAccountDao.class) {
+//				if(bankAccountDao==null) {
+//					bankAccountDao=new BankAccountDao(DbConnection.getDb());
+//				}
+//			}
+//		}
+//		return bankAccountDao;
+//	}
+
+	public static ProductDao getDao() {
+		if(productdao==null) {
+			synchronized (ProductDao.class) {
+				if(productdao==null){
+					productdao=new ProductDao(DbConnection.getDb());
+				}
+				
+			}
+		}
+		return productdao;
+	}
+}

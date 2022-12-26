@@ -1,0 +1,26 @@
+package com.ecom.dao;
+
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<Customer>{
+	private CustomerCollection cc;
+
+	public CustomerCollection() {
+		super();
+	}
+	public static CustomerCollection getCollection;
+	{
+		if(cc == null)
+		{
+			synchronized (CustomerCollection.class) {
+				if(cc == null)
+				{
+					cc = new CustomerCollection();
+				}
+
+			}
+		}
+	}
+
+
+}

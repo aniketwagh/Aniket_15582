@@ -1,0 +1,28 @@
+package com.ecom.dao;
+
+import java.util.Set;
+
+import com.ecom.model.Customer;
+
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<Customer> {
+
+	private static ProductCollection pc;
+	public CustomerCollection() {
+		super();
+	}
+
+	//Singleton object creation
+	public static ProductCollection getCollection() {
+		if(pc==null) {
+			synchronized(ProductCollection.class) {
+				if(pc==null) {
+					pc = new ProductCollection();
+				}
+			}
+		}
+		return pc;
+	}
+
+}

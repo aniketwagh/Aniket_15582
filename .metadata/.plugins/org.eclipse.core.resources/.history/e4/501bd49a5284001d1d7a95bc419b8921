@@ -1,0 +1,15 @@
+package com.Ecom.controller;
+
+import java.util.List;
+
+import com.Ecom.Dao.CustomerDao;
+
+import com.Ecom.model.Customer;
+
+
+public class CustomerCollection {
+
+	private static CustomerCollection collection;
+	private CustomerDao dao;
+	private List<Customer> productList;
+}

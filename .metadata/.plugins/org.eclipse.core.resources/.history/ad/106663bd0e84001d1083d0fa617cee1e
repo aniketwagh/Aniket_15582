@@ -1,0 +1,5 @@
+package com.Ecom.controller;
+
+public interface IController<T> {
+
+}

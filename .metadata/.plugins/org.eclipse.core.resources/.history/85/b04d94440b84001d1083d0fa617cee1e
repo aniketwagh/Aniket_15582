@@ -1,0 +1,7 @@
+package com.Ecom.Dao;
+
+import com.Ecom.model.ProductDetails;
+
+public class ProductDao implements IDao<ProductDetails>{
+
+}

@@ -1,0 +1,5 @@
+package com.meeshoapp;
+
+public interface IMeeshoCollection {
+
+}

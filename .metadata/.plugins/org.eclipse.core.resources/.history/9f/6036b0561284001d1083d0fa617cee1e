@@ -1,0 +1,31 @@
+package com.Ecom.controller;
+
+import java.util.List;
+
+import com.Ecom.Dao.ProductDao;
+import com.Ecom.model.ProductDetails;
+import com.training.bankapp.controller.BankAccountCollection;
+
+public class ProductCollection implements ICollection<ProductDetails> {
+	
+	private static ProductCollection collection;
+	private ProductDao dao;
+	private List<ProductDetails> productList;
+	
+	private ProductCollection() {
+		this.dao = ProductDao.getDao();
+	}
+	
+	public static ProductCollection getProductCollection() {
+		if(collection==null) {
+			synchronized (ProductCollection.class) {
+				if(collection==null) {
+					collection=new ProductCollection();
+				}
+				
+			}
+		}
+		return collection;
+	}
+
+}

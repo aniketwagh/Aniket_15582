@@ -1,0 +1,9 @@
+package com.ecom.dao;
+
+import java.sql.Connection;
+
+public class DbConnection {
+
+	private static DbConnection db;
+	private Connection connection;
+}

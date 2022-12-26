@@ -1,0 +1,54 @@
+package com.Ecom;
+
+import com.Ecom.controller.ProductController;
+
+public class Product {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try {
+			final ProductController productController = ProductController.getProductController();
+			System.out.println("1. Display all Products");
+			System.out.println("2. Details Products");
+			System.out.println("3. Delete Products");
+			System.out.println("4. Update Products");
+			int choice =1;
+			System.out.println("1. Display all products");
+			mainOptions(productController,choice);
+			
+			System.out.println("2. details products");
+			choice=2;
+			mainOptions(productController,choice);
+			
+			System.out.println("2. details products");
+			mainOptions(productController,choice);
+		}
+		
+//		try {
+//			
+//			int choice=1;
+//			System.out.println("1. Displa all Accoutns");
+//			mainOptions(accountController, choice);
+//			
+//			System.out.println("2. Account Details by AccNo");
+//			choice=2;
+//			mainOptions(accountController, choice);
+//			
+//			System.out.println("3. Delete Account by AccNo");
+//			choice=3;
+//			mainOptions(accountController, choice);
+//			
+//			System.out.println("4. Update Balace by AccNO");
+//			choice=4;
+//			mainOptions(accountController, choice);
+//			choice=1;
+//			System.out.println("1. Displa all Accoutns");
+//			mainOptions(accountController, choice);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+
+	}
+
+}

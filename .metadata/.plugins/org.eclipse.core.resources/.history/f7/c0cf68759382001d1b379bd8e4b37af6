@@ -1,0 +1,18 @@
+package com.ecom.main;
+
+import java.util.ArrayList;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+import com.ecom.dao.CustomerCollection;
+import com.ecom.dao.ProductCollection;
+import com.ecom.model.Customer;
+import com.ecom.model.Products;
+
+public class ProductsDetails {
+
+	public static void main(String[] args) {
+	}
+}

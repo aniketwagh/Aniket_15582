@@ -1,0 +1,29 @@
+package com.Ecom.Dao;
+
+import java.sql.Connection;
+
+public class DbConnection {
+
+	private static DbConnection db;
+	private Connection connection;
+	
+	private DbConnection() {
+		
+	}
+	
+	private static DbConnection getDb() {
+		if(db==null) {
+			synchronized (DbConnection.class) {
+				if(db==null) {
+					db=new DbConnection();
+				}
+				
+			}
+		}
+		return db;
+	}
+	
+	
+	
+	
+}

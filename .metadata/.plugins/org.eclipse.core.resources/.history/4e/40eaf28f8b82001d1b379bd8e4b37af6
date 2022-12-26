@@ -1,0 +1,48 @@
+package com.ecom.dao;
+
+import java.util.Set;
+
+import com.ecom.main.ProductsDetails;
+import com.ecom.model.Customer;
+import com.ecom.model.Products;
+import com.meeshoapp.IMeeshoCollection;
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<IMeeshoCollection> {
+	
+	private static CustomerCollection cc;
+
+	@Override
+	public Set<IMeeshoCollection> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String createNewProduct(IMeeshoCollection products) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String updatebyId(IMeeshoCollection entity, int Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IMeeshoCollection findById(int Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteById(int Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+
+}

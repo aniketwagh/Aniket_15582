@@ -1,0 +1,10 @@
+package com.ecom.dao;
+
+import java.util.Set;
+
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<CustomerCollection>{
+	private static CustomerCollection cc;
+
+}

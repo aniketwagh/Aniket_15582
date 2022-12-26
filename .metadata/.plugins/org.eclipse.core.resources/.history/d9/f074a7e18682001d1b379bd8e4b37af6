@@ -1,0 +1,7 @@
+package com.ecom.dao;
+
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<T>{
+
+}

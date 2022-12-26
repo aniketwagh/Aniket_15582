@@ -1,0 +1,42 @@
+package com.Ecom;
+
+import com.Ecom.controller.CustomerController;
+import com.Ecom.controller.ProductController;
+
+public class CustomerCall {
+
+	public static void main(String[] args) {
+		try {
+			final CustomerController customerController = CustomerController.getCustomerController();
+			System.out.println("CURD Opration");
+			int choice =1;
+			System.out.println("1. Display all Customers");
+			mainOptions(customerController,choice);
+			
+			System.out.println("2. Customer Details");
+			choice=2;
+			mainOptions(customerController,choice);
+			
+			System.out.println("3. Delete Customer");
+			choice=3;
+			mainOptions(customerController,choice);
+			
+			System.out.println("4. update products");
+			choice=4;
+			mainOptions(customerController,choice);
+			
+			System.out.println("5. Create New products");
+			choice=5;
+			mainOptions(customerController,choice);
+			
+			choice = 1;
+			System.out.println("Display all Product");
+			mainOptions(customerController,choice);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+
+
+	}
+
+}

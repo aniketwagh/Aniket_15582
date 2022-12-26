@@ -1,0 +1,9 @@
+package com.ecom.dao;
+
+public class CustomerCollection {
+
+	public CustomerCollection() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

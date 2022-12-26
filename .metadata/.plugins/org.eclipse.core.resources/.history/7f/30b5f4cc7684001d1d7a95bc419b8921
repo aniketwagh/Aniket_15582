@@ -1,0 +1,44 @@
+package com.Ecom;
+
+import com.Ecom.controller.CustomerController;
+import com.Ecom.controller.OrderController;
+
+public class Order {
+
+	public static void main(String[] args) {
+		try {
+			final OrderController orderController = OrderController.getOrderController();
+			System.out.println("CURD Opration");
+			int choice =1;
+			System.out.println("1. Display all Order");
+			mainOptions(orderController,choice);
+
+			System.out.println("2. Order Details");
+			choice=2;
+			mainOptions(orderController,choice);
+
+			System.out.println("3. Delete Order");
+			choice=3;
+			mainOptions(orderController,choice);
+
+			System.out.println("4. update Order");
+			choice=4;
+			mainOptions(orderController,choice);
+
+			System.out.println("5. Create New Order");
+			choice=5;
+			mainOptions(orderController,choice);
+
+			choice = 1;
+			System.out.println("Display all Customer");
+			mainOptions(orderController,choice);
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+
+	}
+
+}

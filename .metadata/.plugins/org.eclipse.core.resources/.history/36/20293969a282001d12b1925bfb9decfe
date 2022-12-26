@@ -1,0 +1,16 @@
+package com.meeshoappcollection;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import com.meeshoapp.IMeeshoCollection;
+import com.meeshoapp.IMeeshoCustomerCollection;
+
+public abstract class MeeshoCollection<T> implements IMeeshoCollection<T>,IMeeshoCustomerCollection<T> {
+
+	protected Set<T> collection = new HashSet<>();
+	public MeeshoCollection() {
+		super();
+		
+	}
+}

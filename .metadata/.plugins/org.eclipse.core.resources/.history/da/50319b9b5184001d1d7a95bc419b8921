@@ -1,0 +1,66 @@
+package com.Ecom.Dao;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.Ecom.model.Customer;
+import com.Ecom.model.ProductDetails;
+
+public class CustomerDao implements IDao<Customer>{
+	
+	private DbConnection db;
+	private static CustomerDao customerdao;
+	public CustomerDao() {
+		super();
+		
+	}
+	public CustomerDao(DbConnection db) {
+		super();
+		this.db = db;
+	}
+	
+	public static CustomerDao getDao() {
+		if(customerdao==null) {
+			synchronized (ProductDao.class) {
+				if(customerdao==null){
+					customerdao=new CustomerDao(DbConnection.getDb());
+				}
+				
+			}
+		}
+		return customerdao;
+	
+
+}
+	public List<Customer> findAll() throws SQLException {
+		final List<Customer> list = new ArrayList<Customer>();
+		Connection connect = db.getConnection();
+		Statement statement = connect.createStatement();
+		final String sql = "select custid, custname, custemail, custphone from customer";
+		ResultSet resultSet = statement.executeQuery(sql);
+		while(resultSet.next()) {
+			list.add(new Customer(resultSet.getInt(1),resultSet.getString(2),resultSet.getString(3),resultSet.getInt(4)));
+		}
+		return list;
+	}
+	public Customer findOne(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public boolean createNew(Customer t) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	public boolean findOneAndDelete(int id) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	public boolean findOneAndUpdate(int id, Customer t) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

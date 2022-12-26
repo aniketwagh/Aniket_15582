@@ -1,0 +1,26 @@
+package com.ecom.main;
+
+import java.util.Collection;
+import java.util.Set;
+
+import com.ecom.dao.ProductCollection;
+import com.ecom.model.Products;
+import com.training.bankapp.modal.SavingAccount;
+
+public class ProductsDetails {
+
+	public static void main(String[] args) {
+		
+		ProductCollection pc = ProductCollection.getCollection();
+		Set<Products> p = pc.getList();
+		p.add(new Products("nokia"));
+		p.add(new Products("nokia1"));
+		p.add(new Products("nokia3"));
+		for(Products p1 : p)
+		{
+			System.out.println(p1);
+		}		
+		System.out.println("==============================");
+		pc.findById(3);
+	}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp04"/>
+		<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp03"/>
+		<item value="C:\Users\Aniket15582\Downloads\autowire-spring-app"/>
+	</list>
+	<section name="NewWizardAction">
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp10"/>
+			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp02"/>
+			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp09"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

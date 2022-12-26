@@ -1,0 +1,27 @@
+package com.Ecom.Dao;
+
+import com.Ecom.model.Order;
+
+public class OrderDao implements IDao<Order>{
+	
+	private DbConnection db;
+	private static OrderDao orderdao;
+	public OrderDao() {
+		super();
+	}
+	public OrderDao(DbConnection db) {
+		super();
+		this.db = db;
+	}
+
+	public static OrderDao getDao() {
+		if(orderdao==null) {
+			synchronized (OrderDao.class) {
+				if(orderdao==null){
+					orderdao=new OrderDao(DbConnection.getDb());
+				}
+			}
+		}
+		return orderdao;
+	}
+}

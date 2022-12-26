@@ -1,0 +1,5 @@
+package com.Ecom.model;
+
+public class ProductDetails {
+
+}

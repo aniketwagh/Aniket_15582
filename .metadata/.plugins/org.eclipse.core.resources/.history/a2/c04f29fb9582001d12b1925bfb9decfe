@@ -1,0 +1,17 @@
+package com.ecom.main;
+
+import java.util.Collection;
+
+import com.ecom.dao.ProductCollection;
+import com.ecom.model.Products;
+
+public class ProductsDetails {
+
+	public static void main(String[] args) {
+		
+	ProductCollection pc =new ProductCollection();
+	pc.createNewProduct(null);
+	System.out.println("hi");
+		
+	}
+}

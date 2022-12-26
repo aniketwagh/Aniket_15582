@@ -1,0 +1,56 @@
+package com.ecom.dao;
+
+import java.util.Set;
+
+import com.ecom.model.Customer;
+import com.meeshoappcollection.MeeshoCollection;
+
+public class CustomerCollection extends MeeshoCollection<Customer>{
+
+	private static CustomerCollection cc;
+
+	public CustomerCollection() {
+		super();
+	}
+	public static CustomerCollection getCollection(){
+		if(cc == null){
+			synchronized (CustomerCollection.class) {
+				if(cc == null){
+					cc = new CustomerCollection();
+				}
+			}
+		}
+		return cc;
+	}
+	@Override
+	public Set getList() {
+		return collection;
+	}
+	@Override
+	public String createNewCustomer(Customer custName) {
+		if(collection.add(custName)) {
+			return "Add New Customer";
+		}
+		return null;
+	}
+	@Override
+	public String updatebyId(Customer entity, int Id) {
+		for(Customer customer : collection) {
+			if(customer.getCustId()==Id) {
+				customer.setCustName(customer.getCustName());
+			}
+		}
+		return null;
+	}
+	@Override
+	public Object findById(int Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String deleteById(int Id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,45 @@
+package com.ecom.model;
+
+public class Oredr {
+	private int orderId;
+	private String orderName;
+	private double price;
+	public Oredr() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Oredr(String orderName, double price) {
+		super();
+		this.orderName = orderName;
+		this.price = price;
+	}
+	public Oredr(int orderId, String orderName, double price) {
+		super();
+		this.orderId = orderId;
+		this.orderName = orderName;
+		this.price = price;
+	}
+	public int getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+	public String getOrderName() {
+		return orderName;
+	}
+	public void setOrderName(String orderName) {
+		this.orderName = orderName;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Oredr [orderId=" + orderId + ", orderName=" + orderName + ", price=" + price + "]";
+	}
+	
+}

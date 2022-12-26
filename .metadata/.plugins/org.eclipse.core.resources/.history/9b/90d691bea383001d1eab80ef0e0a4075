@@ -1,0 +1,10 @@
+package com.ecom;
+
+public class PlaceOrder {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
