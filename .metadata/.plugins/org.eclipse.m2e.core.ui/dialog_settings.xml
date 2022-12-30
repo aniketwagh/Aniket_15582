@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Aniket15582\eclipse-workspace\kindleorm01_BookDaoTest_Completed"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp13"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp13\bankapp13"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp12"/>
@@ -23,6 +24,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Aniket15582\eclipse-workspace\kindleorm01"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\Ecommerce2"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\bankapp12\bankapp12\pom.xml"/>
 			<item value="C:\Users\Aniket15582\eclipse-workspace\ecommerce"/>
@@ -67,6 +69,9 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.ecom.shop"/>
+			<item value="com.traning"/>
+			<item value="com.training.kindle"/>
 			<item value="com.ecom"/>
 			<item value="com.capstonproject"/>
 			<item value="com.capston.ecom"/>
@@ -76,12 +81,14 @@
 			<item value="com.training"/>
 			<item value="com.training.bankapp.model"/>
 			<item value="com.trining.bankapp.modal"/>
-			<item value="com.traning"/>
 			<item value="com."/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ecom"/>
+			<item value="kindleorm01"/>
+			<item value="Kindle"/>
 			<item value="EcomProject"/>
 			<item value="EcomProjectFinal"/>
 			<item value="Ecommerce2"/>

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.ecom.customer.OrderItemDaoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.218 s <<< FAILURE! - in com.ecom.customer.OrderItemDaoTest
+testFindOneAndDelete  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.ecom.customer.OrderItemDaoTest.testFindOneAndDelete(OrderItemDaoTest.java:51)
+
+testFindOneNotNull  Time elapsed: 0.002 s  <<< ERROR!
+javax.persistence.NoResultException: No entity found for query
+	at com.ecom.customer.OrderItemDaoTest.testFindOneNotNull(OrderItemDaoTest.java:43)
+
+testFindOneAndUpdate  Time elapsed: 0.205 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.ecom.customer.OrderItemDaoTest.testFindOneAndUpdate(OrderItemDaoTest.java:58)
+

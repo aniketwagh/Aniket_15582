@@ -1,8 +1,0 @@
-package com.ecom.main;
-
-public class ProductsDetails {
-
-	public static void main(String[] args) {
-		
-	}
-}

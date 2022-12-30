@@ -1,5 +1,0 @@
-package com.capston.shopping.util;
-
-public class InvalidProductDataExeption {
-
-}

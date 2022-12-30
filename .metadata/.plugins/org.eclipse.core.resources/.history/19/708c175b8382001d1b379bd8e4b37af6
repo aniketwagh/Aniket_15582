@@ -1,7 +1,0 @@
-package com.meeshoappcollection;
-
-import com.meeshoapp.IMeeshoCollection;
-
-public abstract class MeeshoCollection<T> implements IMeeshoCollection<T> {
-
-}

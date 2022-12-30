@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.ecom.customer.CustomerDaoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 2.813 s <<< FAILURE! - in com.ecom.customer.CustomerDaoTest
+testFindOneAndDelete  Time elapsed: 2.484 s  <<< ERROR!
+java.lang.IllegalArgumentException: org.hibernate.QueryException: could not resolve property: custID of: com.training.customer.model.Customer [Delete from com.training.customer.model.Customer c where c.custID=:id]
+	at com.ecom.customer.CustomerDaoTest.testFindOneAndDelete(CustomerDaoTest.java:46)
+Caused by: org.hibernate.QueryException: could not resolve property: custID of: com.training.customer.model.Customer [Delete from com.training.customer.model.Customer c where c.custID=:id]
+	at com.ecom.customer.CustomerDaoTest.testFindOneAndDelete(CustomerDaoTest.java:46)
+Caused by: org.hibernate.QueryException: could not resolve property: custID of: com.training.customer.model.Customer
+	at com.ecom.customer.CustomerDaoTest.testFindOneAndDelete(CustomerDaoTest.java:46)
+
+testFindOneAndUpdate  Time elapsed: 0.021 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.ecom.customer.CustomerDaoTest.testFindOneAndUpdate(CustomerDaoTest.java:53)
+
