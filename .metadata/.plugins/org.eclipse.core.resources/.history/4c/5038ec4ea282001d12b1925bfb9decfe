@@ -1,5 +1,0 @@
-package com.meeshoapp;
-
-public interface IMeeshoCustomerCollection {
-
-}

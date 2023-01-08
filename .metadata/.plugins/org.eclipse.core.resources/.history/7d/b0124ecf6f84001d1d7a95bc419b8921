@@ -1,9 +1,0 @@
-package com.Ecom.Dao;
-
-import com.Ecom.model.Order;
-
-public class OrderDao implements IDao<Order>{
-	
-	
-
-}

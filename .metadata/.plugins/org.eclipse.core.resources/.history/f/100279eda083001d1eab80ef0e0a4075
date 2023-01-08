@@ -1,7 +1,0 @@
-package com.ecom.model;
-
-public class Oredr {
-	private int orderId;
-	private String orderName;
-	private double price;
-}

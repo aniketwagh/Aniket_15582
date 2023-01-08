@@ -1,7 +1,0 @@
-package com.Ecom.Dao;
-
-import com.Ecom.model.Customer;
-
-public class CustomerDao implements IDao<Customer>{
-
-}

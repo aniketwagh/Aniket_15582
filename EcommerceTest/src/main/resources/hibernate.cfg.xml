@@ -14,5 +14,6 @@
         <mapping class="com.training.customer.model.Customer"/>
         <mapping class="com.training.customer.model.Product"/>
         <mapping class="com.training.customer.model.OrderItem"/>
+        <mapping class="com.training.customer.model.Orders"/>
     </session-factory>
 </hibernate-configuration>
