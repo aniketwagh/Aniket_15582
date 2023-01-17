@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.ecom.test.dao.CartDaoTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 4, Time elapsed: 1.95 s <<< FAILURE! - in com.ecom.test.dao.CartDaoTest
+testCreateCartItems  Time elapsed: 1.944 s  <<< ERROR!
+org.hibernate.exception.ConstraintViolationException: could not execute statement
+	at com.ecom.test.dao.CartDaoTest.beforeEach(CartDaoTest.java:29)
+Caused by: org.postgresql.util.PSQLException: 
+ERROR: insert or update on table "cart" violates foreign key constraint "fkqqat15ecty4ugt3woedcvgl6p"
+  Detail: Key (product_productid)=(1) is not present in table "product".
+	at com.ecom.test.dao.CartDaoTest.beforeEach(CartDaoTest.java:29)
+

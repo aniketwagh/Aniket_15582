@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ecom.customer.OrderItemDaoTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 4, Time elapsed: 0.084 s <<< FAILURE! - in com.ecom.customer.OrderItemDaoTest
-testcreateNew  Time elapsed: 0.081 s  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 4, Time elapsed: 0.097 s <<< FAILURE! - in com.ecom.customer.OrderItemDaoTest
+testcreateNew  Time elapsed: 0.097 s  <<< ERROR!
 javax.persistence.NoResultException: No entity found for query
 	at com.ecom.customer.OrderItemDaoTest.beforeEach(OrderItemDaoTest.java:28)
 

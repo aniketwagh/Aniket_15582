@@ -20,42 +20,47 @@ public class CustomerServiceTest {
 	private CustomerService customerService;
 	@BeforeAll
 	static void beforeAll() {
-		System.out.println("BeforeAll Methed");
+		System.out.println("****************************BeforeAll Methed****************************");
 	}
 	@BeforeEach
 	public void beforeEach() {
 		customerData = new CustomerData();
-		customerData.setCustId(1L);
-		customerData.setCustName("Aniket Waghmare");
-		customerData.setCustEmail("waghmareaniket7@gmail.com");
-		customerData.setCustAddress("Nagpur");
+		customerData.setCustName("Sayli Dhonnar");
+		customerData.setCustEmail("sd7@gmail.com");
+		customerData.setCustAddress("Mumbai");
+		System.out.println("****************************BeforeEachMethod****************************");
 	}
-	@Disabled
+//	@Disabled
 	@Test
 	public void testFindAllNotNull() {
 		assertNotNull(customerService.findAll());
+		System.out.println("****************************FindAllNotNullMethod****************************");
 	}
 	@Test
 	public void testCreateNew() {
 		assertNotNull(customerService.create(customerData));
+		System.out.println("****************************CreateNewMethod****************************");
 	}
-	@Disabled
+//	@Disabled
 	@Test
 	public void testFindOneNotNull() {
-		Long id = 4l;
+		Long id = 8l;
 		assertNotNull(customerService.findById(id));
+		System.out.println("****************************FindOneNotNullMethod****************************");
 	}
-	@Disabled
+//	@Disabled
 	@Test
 	public void testFindOneAndDelete() {
-		Long id = 3l;
+		Long id = 12l;
 		assertTrue(customerService.delete(id));
+		System.out.println("****************************FindOneAndDeleteMethod****************************");
 	}
-	@Disabled
+//	@Disabled
 	@Test
 	public void testFindOneAndUpdate() {
-		Long id = 2l;
+		Long id = 8l;
 		assertNotNull(customerService.update(id, customerData));
+		System.out.println("****************************FindOneAndUpdateMethod****************************");
 	}
 }
 

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.ecom.test.dao.OrderDetailsDaoTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 3, Time elapsed: 0.027 s <<< FAILURE! - in com.ecom.test.dao.OrderDetailsDaoTest
+testCreateOrderDetails  Time elapsed: 0.025 s  <<< ERROR!
+javax.persistence.OptimisticLockException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update cart set orderDetails_orderId=?, product_productId=?, quantity=?, totalItemPrice=? where cartId=?
+	at com.ecom.test.dao.OrderDetailsDaoTest.beforeEach(OrderDetailsDaoTest.java:33)
+Caused by: org.hibernate.StaleStateException: Batch update returned unexpected row count from update [0]; actual row count: 0; expected: 1; statement executed: update cart set orderDetails_orderId=?, product_productId=?, quantity=?, totalItemPrice=? where cartId=?
+	at com.ecom.test.dao.OrderDetailsDaoTest.beforeEach(OrderDetailsDaoTest.java:33)
+
