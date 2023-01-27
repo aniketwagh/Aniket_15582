@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Implementation-Title: meesho-customer
+Implementation-Version: 0.0.1.FINAL
+Build-Jdk-Spec: 1.8
+Created-By: Maven Integration for Eclipse
+
