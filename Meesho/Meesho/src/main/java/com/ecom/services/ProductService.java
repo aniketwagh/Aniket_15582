@@ -1,4 +1,5 @@
 package com.ecom.services;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +23,11 @@ public class ProductService implements IProductService {
 		product.setProductId(productData.getProductId());
 		product.setProductName(productData.getProductName());
 		product.setQuntity(productData.getQuntity());
-		product.setUnitPrice(productData.getUnitPrice());
+		product.setProductDescription(productData.getProductDescription());
+		product.setProductImage(productData.getProductImage());
+		product.setProductPrice(productData.getProductPrice());
+		product.setProductCategories(productData.getProductCategories());
+		
 		return product;
 	}
 
@@ -31,57 +36,57 @@ public class ProductService implements IProductService {
 		productData.setProductId(product.getProductId());
 		productData.setProductName(product.getProductName());
 		productData.setQuntity(product.getQuntity());
-		productData.setUnitPrice(product.getUnitPrice());
+		productData.setProductDescription(product.getProductDescription());
+		productData.setProductImage(product.getProductImage());
+		productData.setProductPrice(product.getProductPrice());
+		productData.setProductCategories(product.getProductCategories());
 		return productData;
 	}
 
 	public List<ProductData> findAll() {
-		List<ProductData> productDataList=new ArrayList<>();
-		List<Product> products=productRepository.findAll();
-		products.forEach(product->{productDataList.add(getProductData(product));});
+		List<ProductData> productDataList = new ArrayList<>();
+		List<Product> products = productRepository.findAll();
+		products.forEach(product -> {
+			productDataList.add(getProductData(product));
+		});
 		return productDataList;
 	}
 
 	public ProductData findById(Long id) {
 		Optional<Product> productOptional = productRepository.findById(id);
-		if(productOptional == null) {
+		if (productOptional == null) {
 			new EntityNotFoundException("ProductNotFound");
 		}
 		return getProductData(productOptional.get());
 	}
 
 	public ProductData create(ProductData productData) {
-		Product product=getProductEntity(productData);
+		Product product = getProductEntity(productData);
 		return getProductData(productRepository.save(product));
 	}
 
 	public boolean delete(Long id) {
 		Product product = productRepository.findById(id).get();
-		if(product!=null) {
+		if (product != null) {
 			productRepository.deleteById(id);
 			return true;
-		}		
+		}
 		return false;
 	}
 
-	public ProductData update(Long id, ProductData productData) {
-		Product product = new Product();
-		String productname = productData.getProductName();
-		int quntity = productData.getQuntity();
-		double unitprice = productData.getUnitPrice();
-		
-		productData = findById(id);
-		productData.setProductId(id);
-		productData.setProductName(productname);
-		productData.setQuntity(quntity);
-		productData.setUnitPrice(unitprice);
-		
-		product.setProductId(productData.getProductId());
-		product.setProductName(productData.getProductName());
-		product.setQuntity(productData.getQuntity());
-		product.setUnitPrice(productData.getUnitPrice());
-		return getProductData(productRepository.save(product));
-		
-		
+	@Override
+	public boolean findOneAndUpdate(Long id, ProductData productData) {
+		Product product = productRepository.findById(id).orElse(null);
+		if(product !=null) {
+			product.setProductName(productData.getProductName());
+			product.setProductCategories(productData.getProductCategories());
+			product.setProductDescription(productData.getProductDescription());
+			product.setProductId(productData.getProductId());
+			product.setProductImage(productData.getProductImage());
+			product.setProductPrice(productData.getProductPrice());
+			product.setQuntity(productData.getQuntity());
+			productRepository.save(product);
+		}
+		return true;
 	}
 }

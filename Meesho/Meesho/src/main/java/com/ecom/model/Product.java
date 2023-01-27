@@ -13,23 +13,34 @@ public class Product {
 	private Long productId;
 	private String productName;
 	private int quntity;
-	private double unitPrice;
+	private String productDescription;
+	private String productImage;
+	private double productPrice;
+	private String productCategories;
 	public Product() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Product(String productName, int quntity, double unitPrice) {
+	public Product(String productName, int quntity, String productDescription, String productImage, double productPrice,
+			String productCategories) {
 		super();
 		this.productName = productName;
 		this.quntity = quntity;
-		this.unitPrice = unitPrice;
+		this.productDescription = productDescription;
+		this.productImage = productImage;
+		this.productPrice = productPrice;
+		this.productCategories = productCategories;
 	}
-	public Product(Long productId, String productName, int quntity, double unitPrice) {
+	public Product(Long productId, String productName, int quntity, String productDescription, String productImage,
+			double productPrice, String productCategories) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
 		this.quntity = quntity;
-		this.unitPrice = unitPrice;
+		this.productDescription = productDescription;
+		this.productImage = productImage;
+		this.productPrice = productPrice;
+		this.productCategories = productCategories;
 	}
 	public Long getProductId() {
 		return productId;
@@ -49,16 +60,35 @@ public class Product {
 	public void setQuntity(int quntity) {
 		this.quntity = quntity;
 	}
-	public double getUnitPrice() {
-		return unitPrice;
+	public String getProductDescription() {
+		return productDescription;
 	}
-	public void setUnitPrice(double unitPrice) {
-		this.unitPrice = unitPrice;
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+	public String getProductImage() {
+		return productImage;
+	}
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
+	}
+	public double getProductPrice() {
+		return productPrice;
+	}
+	public void setProductPrice(double productPrice) {
+		this.productPrice = productPrice;
+	}
+	public String getProductCategories() {
+		return productCategories;
+	}
+	public void setProductCategories(String productCategories) {
+		this.productCategories = productCategories;
 	}
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", productName=" + productName + ", quntity=" + quntity
-				+ ", unitPrice=" + unitPrice + "]";
+				+ ", productDescription=" + productDescription + ", productImage=" + productImage + ", productPrice="
+				+ productPrice + ", productCategories=" + productCategories + "]";
 	}
 	@Override
 	public int hashCode() {
@@ -83,4 +113,5 @@ public class Product {
 			return false;
 		return true;
 	}
+	
 }
